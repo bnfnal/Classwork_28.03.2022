@@ -33,3 +33,34 @@ and returns a list of all the powers of 2 with the exponent ranging from 0 to n 
       }
     }
 
+
+## **Task 2: Break camelCase**
+
+### **Class:** 
+                BreakCamelCase
+### **Function:**   
+                camelCase(String input) 
+
+### **Task:**
+
+Complete the solution so that the function will break up camel casing, using a space between words.
+
+### **Examples:**
+
+
+     "camelCasing"  =>  "camel Casing"
+     "identifier"   =>  "identifier"
+     ""             =>  ""
+
+
+### **Favorite solution:**
+
+
+    class Solution 
+    {
+        public static String camelCase(String input) 
+        {
+        return input.replaceAll("([A-Z])", " $1");
+        }
+    }
+
