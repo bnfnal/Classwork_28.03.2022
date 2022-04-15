@@ -19,6 +19,17 @@ public class Main {
              System.out.print(powers[i] + " ");
         }
         System.out.println();
+        System.out.println();
+        
+        //Task 2: Break camelCase
+        
+        Scanner s = new Scanner(System.in);
+        System.out.println("Task 2: Break camelCase");
+        System.out.println("Введите слово в camelCase");
+        String str = s.next();
+        System.out.println("Отформатированная строка:");
+        System.out.println(BreakCamelCase.camelCase(str));
+        System.out.println();
     }
 
 
@@ -37,4 +48,22 @@ public class Main {
          return powers;
       }
     }
+    
+    //Task 2: Break camelCase
+        
+    public static class BreakCamelCase 
+    {
+       public static String camelCase(String input) 
+       {
+          String res =  "";
+          char[] a = input.toCharArray();
+          for(char x:a)
+          {
+             if(Character.isUpperCase(x)) res += " ";
+             res += x;
+          }
+          return res;
+       }
+    }
+        
 }
